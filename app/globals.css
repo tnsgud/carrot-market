@@ -7,3 +7,9 @@
 		@apply text-orange-500 hover:underline underline-offset-2;
 	}
 }
+
+@layer components {
+	.primary-btn {
+		@apply rounded-md bg-orange-500 text-center font-medium text-white transition-colors;
+	}
+}
