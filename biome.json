@@ -32,7 +32,7 @@
 			"arrowParentheses": "always",
 			"bracketSameLine": false,
 			"quoteStyle": "single",
-			"attributePosition": "auto",
+			"attributePosition": "multiline",
 			"bracketSpacing": true
 		}
 	}
