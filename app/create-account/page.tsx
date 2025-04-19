@@ -1,5 +1,6 @@
-import { ChatBubbleLeftEllipsisIcon } from '@heroicons/react/24/solid'
-import Link from 'next/link'
+import FormInput from '@/components/form-input'
+import FormButton from '@/components/form-btn'
+import SocialLogin from '@/components/social-login'
 
 export default function CreateAccount() {
 	return (
@@ -9,32 +10,36 @@ export default function CreateAccount() {
 				<h2 className="text-xl">Fill in the form below to join!</h2>
 			</div>
 			<form className="flex flex-col gap-3">
-				<div className="flex flex-col gap-2">
-					<input
-						className="h-10 w-full rounded-md border-none bg-transparent ring-1 ring-neutral-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-						type="text"
-						placeholder="Username"
-						required
-					/>
-					<span className="font-medium text-red-500">Input error</span>
-				</div>
-				<button
-					className="primary-btn h-10"
-					type="submit"
-				>
-					Create Account
-				</button>
+				<FormInput
+					type="text"
+					placeholder="Username"
+					required
+					errors={[]}
+				/>
+				<FormInput
+					type="email"
+					placeholder="Email"
+					required
+					errors={[]}
+				/>
+				<FormInput
+					type="password"
+					placeholder="Password"
+					required
+					errors={[]}
+				/>
+				<FormInput
+					type="password"
+					placeholder="Confirm Password"
+					required
+					errors={[]}
+				/>
+				<FormButton
+					loading={false}
+					text="Create account"
+				/>
 			</form>
-			<div className="h-px w-full bg-neutral-500" />
-			<div>
-				<Link
-					href="/sms"
-					className="primary-btn flex h-10 w-full items-center justify-center gap-2"
-				>
-					<ChatBubbleLeftEllipsisIcon className="h-6 w-6" />
-					<span>Sign up with SMS</span>
-				</Link>
-			</div>
+			<SocialLogin />
 		</div>
 	)
 }
