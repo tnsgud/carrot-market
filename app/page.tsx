@@ -11,13 +11,16 @@ export default function Home() {
 			<div className="flex w-full flex-col items-center gap-3 p-6">
 				<Link
 					href="/create-account"
-					className=" w-full rounded-md bg-orange-500 py-2.5 text-center font-medium text-lg text-white transition-colors hover:bg-orange-400"
+					className="primary-btn py-2.5 text-lg"
 				>
 					시작하기
 				</Link>
 				<div className="flex gap-2">
 					<span>이미 계정이 있나요?</span>
-					<Link href="/login" className="hover:underline">
+					<Link
+						href="/login"
+						className="hover:underline"
+					>
 						로그인
 					</Link>
 				</div>
